@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  /* (you can still define CSS vars here if needed) */
+}
+
+/* 1) Poppins Regular (400) */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+/* 2) Poppins SemiBold (600) */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+/* 3) Poppins Bold (700) */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@layer utilities {
+  /* your background utility */
+  .bg-home {
+    background-image: url('/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+  }
+
+  /* Poppins utilities */
+  .font-poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  .font-poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  .font-poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+}
