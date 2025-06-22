@@ -1,6 +1,8 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet"
+import { CiMenuFries } from "react-icons/ci"
 
 const navItems = [
   { name: "Home",        href: "#hero"        },
@@ -42,7 +44,7 @@ export default function Navbar() {
         </div>
 
         {/* 2) Nav links centered */}
-        <div className="flex-1">
+        <div className="flex-1 hidden md:flex justify-center items-center">
           <ul className="flex justify-center space-x-12 text-white/80">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -65,11 +67,47 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-
-        {/* 3) Contact icons (optional) */}
-        <div className="flex-shrink-0 hidden md:flex items-center space-x-4 text-gray-300">
-          {/* insert <FiPhone />, <FiMail />, or whatever */}
+        <div className="md:hidden ml-auto">
+            <Sheet>
+                <SheetTrigger className= "flex justify-center items-center">
+                    <CiMenuFries className= "text-[32px] text-accent"/>
+                </SheetTrigger>
+                <SheetContent className = "flex flex-col">
+                    <SheetHeader>
+                        <SheetTitle className="sr-only"> Navigation Menu  </SheetTitle>
+                    </SheetHeader>
+                    <div className="mt-32 mb-32 text-center text-2xl">
+                        <a href="#hero">
+                            <span className="bg-gradient-to-r from-purple-800 via-indigo-700 to-blue-900 bg-clip-text text-transparent text-3xl font-poppins-bold">
+                            Justin.
+                            </span>
+                        </a>
+                    </div>
+                    <nav className="flex flex-col justify-center items-center gap-5 text-white/80">
+                        {navItems.map((item) => (
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                className="group relative px-1 py-2 font-poppins-semibold uppercase"
+                            >
+                                {item.name}
+                            <span
+                                className="
+                                    absolute bottom-0 left-0 h-[2px] w-full
+                                    bg-gradient-to-r from-purple-800 via-indigo-700 to-blue-900
+                                    transform origin-center scale-x-0
+                                    group-hover:scale-x-100
+                                    transition-transform duration-300
+                                "
+                                />
+                            </a>
+                            ))}
+                    </nav>
+                </SheetContent>
+            </Sheet>
         </div>
+
+        
       </div>
     </nav>
   );

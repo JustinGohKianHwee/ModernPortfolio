@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar"
 const Home = () => {
   return (
     <motion.div
-      className="min-h-screen bg-home bg-cover bg-center bg-fixed overflow-hidden"
+      className="min-h-screen bg-background bg-cover bg-center bg-fixed overflow-hidden"
       animate={{
         filter: ["brightness(1)", "brightness(1.1)", "brightness(1)"],
       }}
