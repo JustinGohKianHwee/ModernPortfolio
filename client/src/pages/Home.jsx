@@ -1,11 +1,14 @@
 // src/pages/Home.jsx
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar"
+import Hero from "@/components/hero"
+import Resume from "@/components/resume";
+import Experiences from "@/components/experiences";
 
 const Home = () => {
   return (
     <motion.div
-      className="min-h-screen bg-background bg-cover bg-center bg-fixed overflow-hidden"
+      className="min-h-screen bg-background bg-cover bg-center bg-fixed"
       animate={{
         filter: ["brightness(1)", "brightness(1.1)", "brightness(1)"],
       }}
@@ -19,6 +22,15 @@ const Home = () => {
       {/* Nav Bar */}
       <Navbar />
       {/* Main Content */}
+       <section id="hero" className="min-h-screen scroll-mt-40 ">
+      <Hero />
+      </section>
+      <section id="skills" className="min-h-screen scroll-mt-32">
+      <Resume />
+      </section>
+      <section id="experiences" className="min-h-screen scroll-mt-32">
+      <Experiences />
+      </section>
       {/* Footer */}
     </motion.div>
   );

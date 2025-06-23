@@ -6,7 +6,6 @@ import { CiMenuFries } from "react-icons/ci"
 
 const navItems = [
   { name: "Home",        href: "#hero"        },
-  { name: "About",       href: "#about"       },
   { name: "Skills",      href: "#skills"      },
   { name: "Experiences", href: "#experiences" },
   { name: "Projects",    href: "#projects"    },
@@ -26,7 +25,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300 sticky",
         isScrolled
           ? "py-2 bg-black/60 backdrop-blur-md shadow-md"
           : "py-4 bg-transparent"
@@ -37,7 +36,7 @@ export default function Navbar() {
         {/* 1) Logo on the left */}
         <div className="flex-shrink-0">
           <a href="#hero">
-            <span className="bg-gradient-to-r from-purple-800 via-indigo-700 to-blue-900 bg-clip-text text-transparent text-3xl font-poppins-bold">
+            <span className="text-gradient text-3xl font-poppins-bold">
               Justin.
             </span>
           </a>
