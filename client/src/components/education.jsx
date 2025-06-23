@@ -78,7 +78,7 @@ export default function Education() {
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="inline-block text-5xl font-bold text-gradient">
+        <h2 className="inline-block text-6xl font-bold text-gradient">
           Education
         </h2>
         <p className="mt-2 text-lg text-white/50">

@@ -5,6 +5,7 @@ import Hero from "@/components/hero"
 import Resume from "@/components/resume";
 import Experiences from "@/components/experiences";
 import Education from "@/components/education";
+import Projects from "@/components/projects";
 
 const Home = () => {
   return (
@@ -34,6 +35,9 @@ const Home = () => {
       </section>
       <section id="education" className="min-h-screen scroll-mt-5">
       <Education />
+      </section>
+      <section id="projects" className="min-h-screen scroll-mt-10">
+      <Projects />
       </section>
       {/* Footer */}
     </motion.div>
