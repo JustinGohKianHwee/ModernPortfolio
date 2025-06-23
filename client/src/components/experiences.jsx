@@ -68,7 +68,7 @@ export default function Experiences() {
   return (
     <section className="relative py-0 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-            <span className="font-poppins-bold text-6xl text-gradient">My Work Experiences</span>
+            <span className="font-poppins-bold text-7xl text-gradient">My Work Experiences</span>
         </div>
         <div className="text-center mt-3">
             <span className="font-poppins-regular text-lg text-white/50">Building expertise through hands-on learning and innovation</span>

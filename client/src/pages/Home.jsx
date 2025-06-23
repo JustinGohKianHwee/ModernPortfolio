@@ -36,7 +36,7 @@ const Home = () => {
       <section id="education" className="min-h-screen scroll-mt-5">
       <Education />
       </section>
-      <section id="projects" className="min-h-screen scroll-mt-10">
+      <section id="projects" className="min-h-screen scroll-mt-15">
       <Projects />
       </section>
       {/* Footer */}

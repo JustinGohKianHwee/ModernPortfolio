@@ -75,13 +75,13 @@ export default function Projects() {
         transition={{ duration: 1, ease: "easeIn" }}
             >
       <div className="text-center">
-            <span className="font-poppins-bold text-6xl text-gradient">My Projects</span>
+            <span className="font-poppins-bold text-7xl text-gradient">My Projects</span>
         </div>
-        <div className="text-center mt-3">
+        <div className="text-center mt-3 lg:mt-20">
             <span className="font-poppins-regular text-lg text-white/50">Click on each for more information</span>
         </div>
 
-      <div className="max-w-8xl mx-auto mt-10 lg mt-30">
+      <div className="max-w-8xl mx-auto mt-10 lg:mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
           {projects.map((proj) => (
             <Dialog key={proj.id}>
