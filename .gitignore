@@ -6,6 +6,9 @@
 .pnp.js
 /client/node_modules
 
+# Python virtual environment
+.venv/
+
 # testing
 /coverage
 
