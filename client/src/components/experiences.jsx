@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const jobs = [
   {
@@ -107,56 +115,146 @@ export default function Experiences() {
                   lg:-translate-x-1/2 -translate-y-1/2
                 "
               />
+              {/* Mobile: entire card triggers dialog */}
+              <div className="lg:hidden">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <motion.div
+                        className={cn(
+              "relative w-[calc(100%-2.5rem)] w-5/6 lg:w-[45%] p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg text-left ml-8 lg:ml-0",
+              isEven ? "lg:ml-auto" : "lg:mr-auto")}
+                        initial={{ opacity: 0, x: isEven ? 100 : -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                      >
+                        <div className="flex items-center justify-start gap-4 mb-1">
+                          <span className="text-xl font-poppins-semibold text-accent">
+                            {exp.year}
+                          </span>
+                          <img
+                            src={exp.image}
+                            alt={`${exp.company} logo`}
+                            className="w-12 h-12 object-contain rounded"
+                          />
+                        </div>
 
-              {/* 3) your half-width card */}
-              <motion.div
-                className={`
-                  relative w-[calc(100%-2.5rem)] w-5/6 lg:w-[45%] p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg text-left ml-8 lg:ml-0
-                  ${isEven ? "lg:ml-auto" : "lg:mr-auto"}
-                `}
-                initial={{ opacity: 0, x: isEven ? 100 : -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                {/* Year + Logo */}
-                <div className={`flex items-center justify-start gap-4 mb-1`}>
-                  <span className="text-xl font-poppins-semibold text-accent ">{exp.year}</span>
-                  <img
-                    src={exp.image}
-                    alt={`${exp.company} logo`}
-                    className="w-12 h-12 object-contain rounded"
-                  />
+                        <h3 className="text-xl font-poppins-semibold text-white/80">
+                          {exp.role}
+                        </h3>
+                        <p className="font-poppins-semibold mb-2 text-gradient">
+                          {exp.company}
+                        </p>
+                        {exp.stack?.length > 0 && (
+                      <div className="mt-4">
+                        <h4 className="font-semibold text-white/40 mb-2 font-poppins-semibold">
+                          Tech Stack:
+                        </h4>
+                        <ul className={`flex flex-wrap justify-${isEven ? "lg:end" : "lg:start"} gap-2`}>
+                          {exp.stack.map((tech, idx) => (
+                            <li
+                              key={idx}
+                              className="bg-gradient text-white px-2 py-1 rounded-full text-sm font-poppins-regular"
+                            >
+                              {tech.name}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                      </motion.div>
+                    </DialogTrigger>
+
+                    <DialogContent className="">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl mb-2 text-gradient font-poppins-semibold">
+                          {exp.role}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="mt-2 text-white/80 font-poppins-regular space-y-4">
+                        <ul className="list-disc list-inside">
+                          {exp.bullets.map((b, idx) => (
+                            <li key={idx}>{b}</li>
+                          ))}
+                        </ul>
+                        {exp.stack?.length > 0 && (
+                          <div>
+                            <h4 className="font-poppins-semibold mb-1">
+                              Tech Stack:
+                            </h4>
+                            <ul className="flex flex-wrap gap-2">
+                              {exp.stack.map((tech, idx) => (
+                                <li
+                                  key={idx}
+                                  className="bg-gradient text-white px-2 py-1 rounded-full text-sm font-poppins-regular"
+                                >
+                                  {tech.name}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                      <div className="mt-4 text-right">
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
 
-                {/* Role & Company */}
-                <h3 className="text-xl font-poppins-semibold text-white/80">{exp.role}</h3>
-                <p className="font-poppins-semibold mb-2 text-gradient">{exp.company}</p>
+                {/* Desktop: static card with inline details */}
+                <div className="hidden lg:block">
+                  <motion.div
+                    className={cn(
+              "relative w-[calc(100%-2.5rem)] w-5/6 lg:w-[45%] p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg text-left ml-8 lg:ml-0",
+              isEven ? "lg:ml-auto" : "lg:mr-auto")}
+                    initial={{ opacity: 0, x: isEven ? 100 : -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  >
+                    <div className="flex items-center justify-start gap-4 mb-1">
+                      <span className="text-xl font-poppins-semibold text-accent">
+                        {exp.year}
+                      </span>
+                      <img
+                        src={exp.image}
+                        alt={`${exp.company} logo`}
+                        className="w-12 h-12 object-contain rounded"
+                      />
+                    </div>
 
-                {/* Bullets */}
-                <ul className="list-disc list-inside space-y-1 text-white/60 hidden lg:block font-poppins-regular">
-                  {exp.bullets.map((b, idx) => (
-                    <li key={idx}>{b}</li>
-                  ))}
-                </ul>
+                    <h3 className="text-xl font-poppins-semibold text-white/80">
+                      {exp.role}
+                    </h3>
+                    <p className="font-poppins-semibold mb-2 text-gradient">
+                      {exp.company}
+                    </p>
 
-                {/* Tech stack */}
-                {exp.stack.length > 0 && (
-                  <div className="mt-4">
-                    <h4 className="font-semibold text-white/40 mb-2 font-poppins-semibold">Tech Stack:</h4>
-                    <ul className={`flex flex-wrap justify-${isEven ? "lg:end" : "lg:start"} gap-2`}>
-                      {exp.stack.map((tech, idx) => (
-                        <li
-                          key={idx}
-                          className="bg-gradient text-white px-2 py-1 rounded-full text-sm font-poppins-regular"
-                        >
-                          {tech.name}
-                        </li>
+                    <ul className="list-disc list-inside space-y-1 text-white/60 font-poppins-regular">
+                      {exp.bullets.map((b, idx) => (
+                        <li key={idx}>{b}</li>
                       ))}
                     </ul>
-                  </div>
-                )}
-              </motion.div>
+
+                    {exp.stack?.length > 0 && (
+                      <div className="mt-4">
+                        <h4 className="font-semibold text-white/40 mb-2 font-poppins-semibold">
+                          Tech Stack:
+                        </h4>
+                        <ul className={`flex flex-wrap justify-${isEven ? "lg:end" : "lg:start"} gap-2`}>
+                          {exp.stack.map((tech, idx) => (
+                            <li
+                              key={idx}
+                              className="bg-gradient text-white px-2 py-1 rounded-full text-sm font-poppins-regular"
+                            >
+                              {tech.name}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </motion.div>
+                </div>
             </div>
           );
         })}
