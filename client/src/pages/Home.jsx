@@ -7,6 +7,8 @@ import Experiences from "@/components/experiences";
 import Education from "@/components/education";
 import Projects from "@/components/projects";
 import WhyMe from "@/components/whyme";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 const Home = () => {
   return (
@@ -43,7 +45,11 @@ const Home = () => {
       <section id="whyme" className="min-h-screen scroll-mt-25">
       <WhyMe />
       </section>
+      <section id="contact" className="min-h-screen scroll-mt-10">
+      <Contact />
+      </section>
       {/* Footer */}
+      <Footer />
     </motion.div>
   );
 };

@@ -77,14 +77,22 @@ export default function Education() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="inline-block text-7xl font-bold text-gradient">
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0]}}           // move up 10px then back
+        transition={{
+            duration: 3,                         // total time for one up-and-down
+            repeat: Infinity,                    // loop forever
+            ease: "easeInOut"
+        }} 
+        className="text-center mb-12">
+        <h2 className="inline-block text-6xl lg:text-7xl font-poppins-bold text-gradient">
           Education
         </h2>
-        <p className="mt-2 text-lg text-white/50">
+        <p className="mt-2 text-lg text-white/50 font-poppins-regular">
           Building expertise through hands-on learning
         </p>
-      </div>
+      </motion.div>
 
       {/* Cards */}
       <div className="space-y-8">
@@ -96,7 +104,7 @@ export default function Education() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className={cn(
                 "relative ring-1 rounded-xl p-6 overflow-visible opacity-0 w-full sm:w-[90%] md:w-[75%] lg:w-[60%] xl:w-[60%] mx-auto",
                 bg,

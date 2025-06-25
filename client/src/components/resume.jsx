@@ -180,7 +180,7 @@ const Resume = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, ease: "easeIn" }}
+            transition={{ duration: 1.5, ease: "easeIn" }}
             className="min-h-screen flex items-center justify-center py-12 xl:py-0"
             >
             <div className="container mx-auto">
