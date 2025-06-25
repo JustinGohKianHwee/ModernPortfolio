@@ -61,6 +61,7 @@ if not os.path.exists(LOG_FILE):
 def whyme():
     data = request.get_json()
     job_desc = data.get("jobDescription")
+    print(f"Job Description: {job_desc}")
     if not job_desc:
         return jsonify({"error": "Missing job description"}), 400
 
@@ -70,6 +71,8 @@ def whyme():
     combine_chain = create_stuff_documents_chain(llm=llm, prompt=prompt)
     chain = create_retrieval_chain(retriever=retriever, combine_docs_chain=combine_chain)
     result = chain.invoke({"input": job_desc})["answer"]
+
+    print(f"Generated Result: {result}")
 
     with open(LOG_FILE, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
