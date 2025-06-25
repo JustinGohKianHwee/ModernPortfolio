@@ -67,12 +67,22 @@ const jobs = [
 export default function Experiences() {
   return (
     <section className="relative py-0 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-            <span className="font-poppins-bold text-7xl text-gradient">My Work Experiences</span>
-        </div>
-        <div className="text-center mt-3">
-            <span className="font-poppins-regular text-lg text-white/50">Building expertise through hands-on learning and innovation</span>
-        </div>
+        <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0]}}           // move up 10px then back
+        transition={{
+            duration: 3,                         // total time for one up-and-down
+            repeat: Infinity,                    // loop forever
+            ease: "easeInOut"
+        }} 
+        className="text-center mb-12">
+        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+          My Work Experiences
+        </h2>
+        <p className="mt-2 text-lg text-white/50 font-poppins-regular">
+          Building expertise through hands-on learning and innovation
+        </p>
+      </motion.div>
       {/* Central vertical line */}
       <div className="relative mt-12 lg:mt-24">
       <div className="absolute left-[1%] lg:left-1/2 top-0 w-1 bg-gray-300 h-full lg:-translate-x-1/2" />

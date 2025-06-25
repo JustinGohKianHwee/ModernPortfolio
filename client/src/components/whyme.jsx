@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export default function WhyMe() {
   const [jobDesc, setJobDesc] = useState("");
@@ -60,13 +61,28 @@ export default function WhyMe() {
   };
 
   return (
-    <div className="min-h-screen max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="text-center">
-            <span className="font-poppins-bold text-7xl text-gradient">Why me?</span>
-        </div>
-        <div className="text-center mt-3">
-            <span className="font-poppins-regular text-lg text-white/50">Telling you why I’m the right choice for your role.</span>
-        </div>
+    <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="min-h-screen max-w-6xl mx-auto px-4 sm:px-6">
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0]}}           // move up 10px then back
+        transition={{
+            duration: 3,                         // total time for one up-and-down
+            repeat: Infinity,                    // loop forever
+            ease: "easeInOut"
+        }} 
+        className="text-center mb-12">
+        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+          Why me?
+        </h2>
+        <p className="mt-2 text-lg text-white/50 font-poppins-regular">
+          Telling you why I'M the right choice for your role.
+        </p>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
       <div className="flex flex-col space-y-6">
         <div>
@@ -122,7 +138,7 @@ export default function WhyMe() {
 
       <div className="flex flex-col space-y-4">
         {!response && !parsing && (
-          <div className="flex-1 bg-[#232329] border border-accent text-gray-500 p-6 rounded-lg">
+          <div className="flex-1 bg-[#1f1f1f] border border-accent text-gray-500 p-6 rounded-lg font-poppins-regular">
             Your AI response will appear here.
           </div>
         )}
@@ -135,6 +151,6 @@ export default function WhyMe() {
         )}
       </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

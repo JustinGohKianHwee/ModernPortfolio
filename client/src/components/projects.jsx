@@ -40,7 +40,7 @@ const projects = [
   {
     id: 3,
     title: "MLBB: Automated ML Platform",
-    imageUrl: "/assets/mlbb.png",
+    imageUrl: "/assets/mlbb.jpg",
     bullets: [
       "React dashboard for dataset upload, algorithm selection, and training monitoring",
       "Flask backend for data cleaning, feature transformation & model training orchestration",
@@ -72,19 +72,40 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1, ease: "easeIn" }}
+        transition={{ duration: 1.5, ease: "easeIn" }}
             >
-      <div className="text-center">
-            <span className="font-poppins-bold text-7xl text-gradient">My Projects</span>
-        </div>
-        <div className="text-center mt-3 lg:mt-20">
-            <span className="font-poppins-regular text-lg text-white/50">Click on each for more information</span>
-        </div>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0]}}           // move up 10px then back
+        transition={{
+            duration: 3,                         // total time for one up-and-down
+            repeat: Infinity,                    // loop forever
+            ease: "easeInOut"
+        }} 
+        className="text-center mb-12">
+        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+          My Projects
+        </h2>
+        <p className="mt-2 text-lg font-poppins-regular text-white/50">
+          Click on each for more information
+        </p>
+      </motion.div>
 
       <div className="max-w-8xl mx-auto mt-10 lg:mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-          {projects.map((proj) => (
+          {projects.map((proj,i) => {
+            const isEven = i % 2 === 0;
+          return (
             <Dialog key={proj.id}>
+                <motion.div
+                    initial={{ y: isEven ? 0 : -10 }}
+                    animate={{ y: isEven ? [0, -10, 0] :  [-10, 0, -10]}}           // move up 10px then back
+                    transition={{
+                      duration: 3,                         // total time for one up-and-down
+                      repeat: Infinity,                    // loop forever
+                      ease: "easeInOut"
+                    }}
+                  >
               <DialogTrigger asChild>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -107,6 +128,7 @@ export default function Projects() {
                   </div>
                 </motion.div>
               </DialogTrigger>
+              </motion.div>
 
               <DialogContent
                 className={cn(
@@ -145,7 +167,7 @@ export default function Projects() {
                   </DialogDescription>
               </DialogContent>
             </Dialog>
-          ))}
+          )})}
         </div>
       </div>
     </motion.section>
