@@ -72,11 +72,11 @@ export default function Navbar() {
                 <SheetTrigger className= "flex justify-center items-center">
                     <CiMenuFries className= "text-[32px] text-accent"/>
                 </SheetTrigger>
-                <SheetContent className = "flex flex-col">
+                <SheetContent className = "flex flex-col min-h-screen py-12">
                     <SheetHeader>
                         <SheetTitle className="sr-only"> Navigation Menu  </SheetTitle>
                     </SheetHeader>
-                    <div className="mt-24 mb-12 text-center text-2xl">
+                    <div className="text-center text-2xl mb-10">
                         <a href="#hero">
                             <span className="bg-gradient-to-r from-purple-800 via-indigo-700 to-blue-900 bg-clip-text text-transparent text-3xl font-poppins-bold">
                             Justin.
