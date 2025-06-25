@@ -183,7 +183,7 @@ const Resume = () => {
             transition={{ duration: 1.5, ease: "easeIn" }}
             className="min-h-screen flex items-center justify-center py-12 xl:py-0"
             >
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6">
                 <Tabs
                     defaultValue="About Me"
                     className="flex flex-col xl:flex-row gap-[60px]"
@@ -194,14 +194,14 @@ const Resume = () => {
                         <TabsTrigger value="Tech Stack" className="text-white font-poppins-regular">Tech Stack</TabsTrigger>
                         <TabsTrigger value="Skills" className="text-white font-poppins-regular">Skills</TabsTrigger>
                     </TabsList>
-                    <div className="min-h-[100vh] w-full pb-8">
+                    <div className="min-h-[100vh] w-full pb-8 px-4">
                         <TabsContent value="About Me" className="w-full">
                             <div className="flex flex-col gap-[30px]">
                                 <h3 className="text-4xl text-gradient leading-snug font-poppins-semibold text-center xl:text-left">
                                     {about.title}
                                 </h3>
-                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 px-4 sm:px-6 font-poppins-regular">{about.description}  </p>
-                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 px-4 sm:px-6 font-poppins-regular">{about.description2}  </p>
+                                <p className="max-w-[900px] text-white/60 mx-auto xl:mx-0 font-poppins-regular">{about.description}  </p>
+                                <p className="max-w-[900px] text-white/60 mx-auto xl:mx-0 font-poppins-regular">{about.description2}  </p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[800px] mx-auto xl:mx-0">
                                     {about.info.map((item,index) => {
                                         return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
