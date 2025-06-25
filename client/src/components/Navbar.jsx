@@ -5,13 +5,13 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/co
 import { CiMenuFries } from "react-icons/ci"
 
 const navItems = [
-  { name: "Home",        href: "#hero"        },
-  { name: "Skills",      href: "#skills"      },
-  { name: "Experiences", href: "#experiences" },
-  { name: "Education",   href: "#education"   },
-  { name: "Projects",    href: "#projects"    },
-  { name: "Why me?",     href: "#whyme"   },
-  { name: "Contact",     href: "#contact"     },
+  { name: "Home",        href: "/#hero"        },
+  { name: "Skills",      href: "/#skills"      },
+  { name: "Experiences", href: "/#experiences" },
+  { name: "Education",   href: "/#education"   },
+  { name: "Projects",    href: "/#projects"    },
+  { name: "Why me?",     href: "/#whyme"   },
+  { name: "Contact",     href: "/#contact"     },
 ];
 
 export default function Navbar() {
