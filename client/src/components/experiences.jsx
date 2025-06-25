@@ -5,7 +5,7 @@ const jobs = [
   {
     year: "2025",
     company: "Visenze Pte Ltd",
-    image: "/assets/visenze.png",
+    image: "/portfolio/assets/visenze.png",
     role: "Machine Learning Research Engineer",
     bullets: [
       "Conducted research and experimentation to improve dense and sparse transformer-based embeddings for ViSenze’s multi-modal search system",
@@ -20,7 +20,7 @@ const jobs = [
   {
     year: "2024",
     company: "Deloitte & Touche",
-    image: "/assets/deloitte.jpg",
+    image: "/portfolio/assets/deloitte.jpg",
     role: "Financial Forensic Data Analyst",
     bullets: [
       "Built an ensemble ML classifier (unsupervised + supervised) to flag risky/fraudulent customers & transactions",
@@ -35,7 +35,7 @@ const jobs = [
   {
     year: "2023",
     company: "Land Transport Authority",
-    image: "/assets/lta.jpeg",
+    image: "/portfolio/assets/lta.jpeg",
     role: "Finance Software Engineer",
     bullets: [
       "Developed Python and UiPath bots to automate inefficient and manual financial processes",
@@ -50,7 +50,7 @@ const jobs = [
   {
     year: "2022",
     company: "PriceWaterhouseCoopers",
-    image: "/assets/pwc.jpg",
+    image: "/portfolio/assets/pwc.jpg",
     role: "Assurance Intern",
     bullets: [
       "Processed incoming Bank Confirmations before dissemination to relevant GA teams and Partners for further action",

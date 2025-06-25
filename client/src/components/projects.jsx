@@ -15,7 +15,7 @@ const projects = [
   {
     id: 1,
     title: "Fake News Classification",
-    imageUrl: "/assets/fake-news.png",
+    imageUrl: "/portfolio/assets/fake-news.png",
     bullets: [
       "Designed and trained CNNs on a curated news dataset to detect linguistic and semantic cues of misinformation",
       "Engineered an ensemble of Logistic Regression, SVM & Random Forest to improve overall robustness",
@@ -27,7 +27,7 @@ const projects = [
   {
     id: 2,
     title: "POS Tagging with Viterbi",
-    imageUrl: "/assets/pos-tagging.jpg",
+    imageUrl: "/portfolio/assets/pos-tagging.jpg",
     bullets: [
       "Built a Twitter POS tagger using Hidden Markov Models and Viterbi decoding",
       "Smoothed unknown tokens with a Naïve Bayes fallback, boosting rare-word accuracy",
@@ -40,7 +40,7 @@ const projects = [
   {
     id: 3,
     title: "MLBB: Automated ML Platform",
-    imageUrl: "/assets/mlbb.jpg",
+    imageUrl: "/portfolio/assets/mlbb.jpg",
     bullets: [
       "React dashboard for dataset upload, algorithm selection, and training monitoring",
       "Flask backend for data cleaning, feature transformation & model training orchestration",
@@ -53,7 +53,7 @@ const projects = [
   {
   id: 4,
   title: "POPTrade Marketplace",
-  imageUrl: "/assets/poptrade.png",
+  imageUrl: "/portfolio/assets/poptrade.png",
   bullets: [
     "Built a Vue.js front end for browsing, listing, and trading Pop Mart blind‐box figures with real‐time price & availability feeds",
     "Implemented Firebase Authentication for secure sign-in, and Firestore for storing user profiles, listings, bids, and trade history",
