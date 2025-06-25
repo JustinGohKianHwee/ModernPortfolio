@@ -97,15 +97,6 @@ export default function Projects() {
             const isEven = i % 2 === 0;
           return (
             <Dialog key={proj.id}>
-                <motion.div
-                    initial={{ y: isEven ? 0 : -10 }}
-                    animate={{ y: isEven ? [0, -10, 0] :  [-10, 0, -10]}}           // move up 10px then back
-                    transition={{
-                      duration: 3,                         // total time for one up-and-down
-                      repeat: Infinity,                    // loop forever
-                      ease: "easeInOut"
-                    }}
-                  >
               <DialogTrigger asChild>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -128,7 +119,6 @@ export default function Projects() {
                   </div>
                 </motion.div>
               </DialogTrigger>
-              </motion.div>
 
               <DialogContent
                 className={cn(

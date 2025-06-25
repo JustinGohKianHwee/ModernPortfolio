@@ -18,7 +18,7 @@ const hero = () => {
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-8 xl:pb-24">
           <div className="order-2 xl:order-none flex flex-col items-center xl:items-start text-center xl:text-left space-y-8">
             <h1 className="h1">
-              <span className="text-gradient text-7xl font-poppins-bold">
+              <span className="text-gradient text-5xl sm:text-7xl font-poppins-bold">
                 Justin Goh</span>
             </h1>
             <div>
