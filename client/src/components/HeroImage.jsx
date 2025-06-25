@@ -12,7 +12,7 @@ export default function Photo() {
         className="absolute w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] rounded-full overflow-hidden mix-blend-normal"
     >
         <img
-        src="/portfolio/assets/montreal_final.png"
+        src="/assets/montreal_final.png"
         alt="Montreal skyline"
         className="w-full h-full object-contain rounded-full"
         />
