@@ -11,9 +11,9 @@ const jobs = [
       "Conducted research and experimentation to improve dense and sparse transformer-based embeddings for ViSenze’s multi-modal search system",
       "Engineered and scaled large-scale hard negative mining workflows, culminating in an end-to-end continual improvement training pipeline for Visenze's sparse and dense models",
       "Leveraged and integrated LLM into research pipeline for structured annotation and generation, building an efficient MLOps codebase for future research purposes",
-      "Fine-tuned and deployed feature set release for synonym improvement for fashion search products"
+      "Fine-tuned and deployed feature set release for synonym improvement for fashion search products",
     ],
-    stack: [{ name: "Tensorflow"},{ name: "Pytorch"},{ name: "CUDA"},{ name: "Langchain"},{ name: "Ollama"},{ name: "OpenAI"},{ name: "HuggingFace Transformers"}],
+    stack: [{ name: "Tensorflow"},{ name: "Pytorch"},{ name: "CUDA"},{ name: "Langchain"},{ name: "Ollama"},{ name: "OpenAI"},{ name: "Deepseek"},{ name: "HuggingFace Transformers"}],
     github: "",
     live: ""
   },
@@ -28,7 +28,7 @@ const jobs = [
       "Enhanced features in existing data-viz software",
       "Queried and managed transactional data via SQL in relational databases",
     ],
-    stack: [{ name: "Python"}, { name: "Scikit-learn"}, { name: "Jupyterlab"}],
+    stack: [{ name: "Python"}, { name: "Scikit-learn"}, { name: "Jupyterlab"}, { name: "Pandas"},{ name: "Numpy"}],
     github: "",
     live: ""
   },
@@ -43,7 +43,7 @@ const jobs = [
       "Streamlined workflows, reducing manual time by 65% (21 man-days saved/yr)",
       "Conducted multiple User Acceptance Testing cycles",
     ],
-    stack: [{ name: "Python"}, { name: "Java"}],
+    stack: [{ name: "Python"}, { name: "Java"}, { name: "UiPath"}, { name: "Pandas"},{ name: "Numpy"}],
     github: "",
     live: ""
   },
