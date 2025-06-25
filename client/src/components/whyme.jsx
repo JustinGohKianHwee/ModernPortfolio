@@ -13,7 +13,7 @@ export default function WhyMe() {
   const [parsing, setParsing] = useState(false);
   const [response, setResponse] = useState("");
 
-  const API = "http://localhost:5000";
+  const API = import.meta.env.VITE_API_BASE_URL; ;
 
   const handleFileChange = async (e) => {
     const file = e.target.files?.[0];
