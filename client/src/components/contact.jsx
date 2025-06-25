@@ -13,6 +13,8 @@ const info = [
   },
 ];
 
+const MAX_CHARS = 2000
+
 export default function Contact() {
   const [status, setStatus] = useState("");
   const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
@@ -99,6 +101,7 @@ export default function Contact() {
                 name="message"
                 placeholder="Type your message here"
                 rows={6}
+                maxLength={MAX_CHARS}
                 required
                 className="h-[200px] border-white/10 font-poppins-regular text-white/80 placeholder:text-white/60 focus-visible:outline-none focus-visible-ring-1 focus-visible:ring-accent focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
               />

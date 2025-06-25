@@ -26,9 +26,11 @@ const hero = () => {
             </div>
             <p className="max-w-[500px] mb-9 text-white/80 font-poppins-regular">Final-year Business Analytics student at the National University of Singapore with specialisations in Machine Learning and Financial Analytics.</p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant= "outline" size = "lg" className= "uppercase flex items-center gap-2">
+              <Button asChild variant= "outline" size = "lg" className= "uppercase flex items-center gap-2">
+                <a href = "/Goh_Kian_Hwee_Justin_Resume.pdf" download>
                 <span> Download CV </span>
                 <FiDownload className="text-xl" />
+                </a>
               </Button>
               <div className="mb-8 xl:mb-0">
                 <Socials 

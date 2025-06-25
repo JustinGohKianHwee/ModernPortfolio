@@ -76,7 +76,7 @@ export default function Experiences() {
             ease: "easeInOut"
         }} 
         className="text-center mb-12">
-        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+        <h2 className="inline-block text-6xl lg:text-7xl font-poppins-bold text-gradient leading-snug">
           My Work Experiences
         </h2>
         <p className="mt-2 text-lg text-white/50 font-poppins-regular">

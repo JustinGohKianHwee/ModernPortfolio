@@ -83,7 +83,7 @@ export default function Projects() {
             ease: "easeInOut"
         }} 
         className="text-center mb-12">
-        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+        <h2 className="inline-block text-6xl lg:text-7xl font-poppins-bold text-gradient leading-snug">
           My Projects
         </h2>
         <p className="mt-2 text-lg font-poppins-regular text-white/50">

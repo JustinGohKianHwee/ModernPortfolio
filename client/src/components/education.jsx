@@ -86,7 +86,7 @@ export default function Education() {
             ease: "easeInOut"
         }} 
         className="text-center mb-12">
-        <h2 className="inline-block text-7xl font-poppins-bold text-gradient">
+        <h2 className="inline-block text-6xl lg:text-7xl font-poppins-bold text-gradient">
           Education
         </h2>
         <p className="mt-2 text-lg text-white/50 font-poppins-regular">

@@ -5,13 +5,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
+const MAX_CHARS = 2000;
+
 export default function WhyMe() {
   const [jobDesc, setJobDesc] = useState("");
   const [loading, setLoading] = useState(false);
   const [parsing, setParsing] = useState(false);
   const [response, setResponse] = useState("");
 
-  const API = import.meta.env.VITE_API_BASE_URL;
+  const API = "http://localhost:5000";
 
   const handleFileChange = async (e) => {
     const file = e.target.files?.[0];
@@ -76,11 +78,11 @@ export default function WhyMe() {
             ease: "easeInOut"
         }} 
         className="text-center mb-12">
-        <h2 className="inline-block text-7xl font-poppins-bold text-gradient leading-snug">
+        <h2 className="inline-block text-6xl lg:text-7xl font-poppins-bold text-gradient leading-snug">
           Why me?
         </h2>
         <p className="mt-2 text-lg text-white/50 font-poppins-regular">
-          Telling you why I'M the right choice for your role.
+          Telling you why I'm the right choice for your role.
         </p>
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
@@ -116,6 +118,7 @@ export default function WhyMe() {
           rows={10}
           placeholder="Paste job description here…"
           value={jobDesc}
+          maxLength={MAX_CHARS}
           onChange={(e) => setJobDesc(e.target.value)}
           disabled={parsing}
           className="bg-[#1f1f1f] text-white text-md p-4 font-poppins-regular"
@@ -139,12 +142,12 @@ export default function WhyMe() {
       <div className="flex flex-col space-y-4">
         {!response && !parsing && (
           <div className="flex-1 bg-[#1f1f1f] border border-accent text-gray-500 p-6 rounded-lg font-poppins-regular">
-            Your AI response will appear here.
+            Your tailored pitch will appear here.
           </div>
         )}
 
         {response && (
-          <div className="flex-1 bg-[#232329] text-white p-6 rounded-lg border border-accent flex-1 overflow-auto">
+          <div className="flex-1 bg-[#1f1f1f] text-white p-6 rounded-lg border border-accent flex-1 overflow-auto">
             <h2 className="text-3xl font-poppins-semibold mb-4 text-gradient">Your Tailored Pitch:</h2>
             <p className="font-poppins-regular">{response}</p>
           </div>
