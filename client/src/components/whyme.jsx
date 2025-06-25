@@ -68,7 +68,7 @@ export default function WhyMe() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="min-h-screen max-w-6xl mx-auto px-4 sm:px-6">
+        className="min-h-screen max-w-6xl mx-auto px-2 sm:px-0">
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: [0, -10, 0]}}           // move up 10px then back

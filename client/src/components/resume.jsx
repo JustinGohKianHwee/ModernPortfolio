@@ -200,8 +200,8 @@ const Resume = () => {
                                 <h3 className="text-4xl text-gradient leading-snug font-poppins-semibold text-center xl:text-left">
                                     {about.title}
                                 </h3>
-                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 font-poppins-regular">{about.description}  </p>
-                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 font-poppins-regular">{about.description2}  </p>
+                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 px-4 sm:px-6 font-poppins-regular">{about.description}  </p>
+                                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0 px-4 sm:px-6 font-poppins-regular">{about.description2}  </p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[800px] mx-auto xl:mx-0">
                                     {about.info.map((item,index) => {
                                         return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
