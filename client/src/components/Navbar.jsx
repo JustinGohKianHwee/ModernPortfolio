@@ -76,7 +76,7 @@ export default function Navbar() {
                     <SheetHeader>
                         <SheetTitle className="sr-only"> Navigation Menu  </SheetTitle>
                     </SheetHeader>
-                    <div className="mt-32 mb-12 text-center text-2xl">
+                    <div className="mt-24 mb-12 text-center text-2xl">
                         <a href="#hero">
                             <span className="bg-gradient-to-r from-purple-800 via-indigo-700 to-blue-900 bg-clip-text text-transparent text-3xl font-poppins-bold">
                             Justin.
