@@ -82,3 +82,7 @@ def whyme():
             result.replace("\n", " ")
         ])
     return jsonify({"result": result})
+
+@whyme_bp.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "ok"}), 200
