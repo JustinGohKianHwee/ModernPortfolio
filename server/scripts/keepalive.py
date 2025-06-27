@@ -3,7 +3,7 @@
 import requests
 from datetime import datetime
 
-URL = "https://modernportfolio-vcx0.onrender.com"
+URL = "https://modernportfolio-vcx0.onrender.com/api/whyme/health"
 TIMEOUT = 10  # seconds
 
 def ping():
