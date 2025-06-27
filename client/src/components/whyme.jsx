@@ -32,7 +32,11 @@ export default function WhyMe() {
         throw new Error(await res.text());
       }
       const { text } = await res.json();
-      setJobDesc(text);
+      const truncated = text.length > MAX_CHARS
+        ? text.slice(0, MAX_CHARS)
+        : text;
+
+    setJobDesc(truncated);
     } catch (err) {
       console.error("PDF parse error:", err);
       alert("Failed to parse PDF. Check console for details.");
